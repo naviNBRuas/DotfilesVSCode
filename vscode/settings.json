@@ -1,0 +1,91 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "workbench.editor.enablePreview": false,
+    "window.confirmSaveUntitledWorkspace": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.openRepositoryInParentFolders": "never",
+
+    // ── Editor ──────────────────────────────────────────────────────────────
+    "editor.inlineSuggest.enabled": true,
+
+    // ── Terminal ─────────────────────────────────────────────────────────────
+    "terminal.external.linuxExec": "kitty",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash",
+            "icon": "terminal-git-bash"
+        }
+    },
+
+    // ── GitHub Copilot ───────────────────────────────────────────────────────
+    "github.copilot.enable": {
+        "*": true,
+        "quarto": false
+    },
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.renameSuggestions.triggerAutomatically": true,
+    "github.copilot.chat.alternateGptPrompt.enabled": true,
+    "github.copilot.chat.anthropic.thinking.enabled": true,
+    "github.copilot.chat.anthropic.tools.websearch.enabled": true,
+    "github.copilot.chat.generateTests.codeLens": true,
+    "github.copilot.chat.tools.memory.enabled": true,
+    "github.copilot.chat.agent.thinkingTool.enabled": true,
+    "github.copilot.chat.search.semanticTextResults": true,
+    "github.copilot.chat.edits.suggestRelatedFilesFromGitHistory": true,
+    "github.copilot.chat.languageContext.typescript.enabled": true,
+    "github.copilot.chat.fixWithCopilot": true,
+    "github.copilot.chat.codeGeneration.instructions": [
+        { "file": "~/.github/instructions/default.instructions.md" }
+    ],
+    "github.copilot.chat.reviewSelection.instructions": [
+        { "file": "~/.github/instructions/code-review.instructions.md" }
+    ],
+    "github.copilot.chat.testGeneration.instructions": [
+        { "file": "~/.github/instructions/testing.instructions.md" }
+    ],
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+        { "file": "~/.github/instructions/commits.instructions.md" }
+    ],
+
+    // ── MCP / Chat ───────────────────────────────────────────────────────────
+    "chat.mcp.autostart": "onRequest",
+    "chat.mcp.gallery.enabled": true,
+    "chat.mcp.access": "all",
+    "chat.unifiedAgentsBar.enabled": true,
+
+    // ── Claude Code ──────────────────────────────────────────────────────────
+    "claudeCode.preferredLocation": "panel",
+
+    // ── Language-specific ────────────────────────────────────────────────────
+    "[latex]": {
+        "editor.defaultFormatter": "mathematic.vscode-latex"
+    },
+    "files.associations": {
+        "*.Rmd": "rmarkdown"
+    },
+
+    // ── Playwright ───────────────────────────────────────────────────────────
+    "playwright.reuseBrowser": true,
+    "playwright.showTrace": false,
+
+    // ── Telemetry ────────────────────────────────────────────────────────────
+    "redhat.telemetry.enabled": false,
+
+    // ── HTTP ─────────────────────────────────────────────────────────────────
+    "http.systemCertificatesNode": true
+}

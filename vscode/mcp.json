@@ -1,0 +1,23 @@
+{
+  "servers": {
+    "github": {
+      "command": "<path-to>/.claude/bin/mcp-github",
+      "args": [],
+      "env": {}
+    },
+    "memory": {
+      "command": "mcp-server-memory",
+      "args": []
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp@latest"],
+      "env": {}
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "env": {}
+    }
+  }
+}

@@ -1,0 +1,55 @@
+# NBR. Company — VS Code Copilot MCP Server Registry
+# Active servers are wired in ~/.config/Code/User/mcp.json
+
+version: "1.0"
+organization: "NBR. Company"
+last_updated: "2026-06-16"
+config_file: "~/.config/Code/User/mcp.json"
+
+servers:
+  github:
+    command: ~/.claude/bin/mcp-github
+    purpose: github-api, code-search, pr-management, repo-operations
+    status: active
+    shared_with: claude-code
+    auth:
+      method: gh-cli-wrapper
+      note: "Token sourced at runtime via `gh auth token` — not stored in plaintext"
+    tools:
+      - search_repositories
+      - get_file_contents
+      - create_or_update_file
+      - create_issue
+      - list_issues
+      - create_pull_request
+      - get_pull_request
+      - list_pull_requests
+      - search_code
+
+  memory:
+    command: mcp-server-memory
+    package: "@modelcontextprotocol/server-memory"
+    purpose: session-knowledge-graph, entity-relation-memory
+    status: active
+    shared_with: claude-code
+    tools:
+      - create_entities
+      - create_relations
+      - add_observations
+      - read_graph
+      - search_nodes
+      - open_nodes
+
+  context7:
+    command: npx
+    args: ["-y", "@upstash/context7-mcp@latest"]
+    purpose: library-docs, api-reference, framework-docs
+    status: active
+    note: "Use when working with any library or framework — always prefer over training data for docs"
+
+  sequential-thinking:
+    command: npx
+    args: ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    purpose: structured-reasoning, complex-problem-decomposition
+    status: active
+    note: "Use for multi-step reasoning tasks and complex architecture decisions"

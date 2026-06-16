@@ -1,0 +1,23 @@
+# VS Code runtime caches — never commit
+vscode/blob_storage/
+vscode/Cache/
+vscode/CachedData/
+vscode/CachedExtensionVSIXs/
+vscode/CachedProfilesData/
+vscode/Code Cache/
+vscode/DawnGraphiteCache/
+vscode/DawnWebGPUCache/
+vscode/GPUCache/
+vscode/logs/
+vscode/Crashpad/
+vscode/Session Storage/
+vscode/Local Storage/
+vscode/Cookies
+vscode/Network Persistent State/
+vscode/DIPS/
+vscode/Backups/
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
